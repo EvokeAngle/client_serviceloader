@@ -22,10 +22,11 @@ public class Main extends Application  {
 	@Override
 	public void start(Stage stage) {
 
-		final var serviceLoader = ServiceLoader.load(DisneyWorldMember.class);
+		ServiceLoader<DisneyWorldMember> serviceLoader = ServiceLoader.load(DisneyWorldMember.class);
 
 		String temp = "";
 		// as iterable
+		System.out.println(serviceLoader.findFirst());
 		for (final var dwm : serviceLoader) {
 			System.out.println(dwm.getName());
 			temp += dwm.getName()+"-----";
