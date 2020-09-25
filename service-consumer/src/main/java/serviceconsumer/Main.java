@@ -22,7 +22,12 @@ public class Main extends Application  {
 	@Override
 	public void start(Stage stage) {
 
-		ServiceLoader<DisneyWorldMember> serviceLoader = ServiceLoader.load(DisneyWorldMember.class);
+		ServiceLoader<DisneyWorldMember> serviceLoader = null;
+		try {
+			serviceLoader = ServiceLoader.load(DisneyWorldMember.class);
+		} catch (Throwable e) {
+			e.printStackTrace();
+		}
 
 		String temp = "";
 		// as iterable
