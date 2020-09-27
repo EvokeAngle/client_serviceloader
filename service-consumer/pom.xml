@@ -49,18 +49,9 @@
 
 					<nativeImageArgs>
 						<nativeImageArg>-H:+TraceClassInitialization</nativeImageArg>
-
 					</nativeImageArgs>
 
 				</configuration>
-
-
-
-
-
-
-
-
 			</plugin>
 		</plugins>
 	</build>
