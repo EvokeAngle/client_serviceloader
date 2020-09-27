@@ -46,13 +46,6 @@
 					<!-- Uncomment to run on iOS: -->
 					<!-- <target>ios</target> -->
 					<mainClass>${mainClassName}</mainClass>
-					<reflectionList>
-
-						<list>disneyworld.implementation.Donald</list>
-						<list>disneyworld.implementation.Goofy</list>
-						<list>disneyworld.implementation.Mickey</list>
-
-					</reflectionList>
 
 					<nativeImageArgs>
 						<nativeImageArg>-H:+TraceClassInitialization</nativeImageArg>
