@@ -48,6 +48,7 @@
 					<mainClass>${mainClassName}</mainClass>
 
 					<resourcesList>
+						<list>disneyworld.service.DisneyWorldMember</list>
 						<list>disneyworld.implementation.Mickey</list>
 						<list>disneyworld.implementation.Donald</list>
 						<list>disneyworld.implementation.Goofy</list>
