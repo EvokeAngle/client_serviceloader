@@ -47,12 +47,12 @@
 					<!-- <target>ios</target> -->
 					<mainClass>${mainClassName}</mainClass>
 
-					<resourcesList>
+					<reflectionList>
 						<list>disneyworld.service.DisneyWorldMember</list>
 						<list>disneyworld.implementation.Mickey</list>
 						<list>disneyworld.implementation.Donald</list>
 						<list>disneyworld.implementation.Goofy</list>
-					</resourcesList>
+					</reflectionList>
 
 					<nativeImageArgs>
 						<nativeImageArg>-H:+TraceClassInitialization</nativeImageArg>
