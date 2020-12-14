@@ -1,5 +1,7 @@
 package serviceconsumer;
 
+import bean.Person;
+import com.alibaba.fastjson.JSON;
 import disneyworld.service.DisneyWorldMember;
 
 import java.util.ServiceLoader;
@@ -22,20 +24,27 @@ public class Main extends Application  {
 	@Override
 	public void start(Stage stage) {
 
-		ServiceLoader<DisneyWorldMember> serviceLoader = null;
-		try {
-			serviceLoader = ServiceLoader.load(DisneyWorldMember.class);
-		} catch (Throwable e) {
-			e.printStackTrace();
-		}
+//		ServiceLoader<DisneyWorldMember> serviceLoader = null;
+//		try {
+//			serviceLoader = ServiceLoader.load(DisneyWorldMember.class);
+//		} catch (Throwable e) {
+//			e.printStackTrace();
+//		}
+//
+//		String temp = "";
+//		// as iterable
+//		System.out.println(serviceLoader.findFirst());
+//		for (final var dwm : serviceLoader) {
+//			System.out.println(dwm.getName());
+//			temp += dwm.getName()+"-----";
+//		}
+		Person person = new Person();
+		person.setName("A");
+		person.setAge(22);
+		String temp = JSON.toJSONString(person);
 
-		String temp = "";
-		// as iterable
-		System.out.println(serviceLoader.findFirst());
-		for (final var dwm : serviceLoader) {
-			System.out.println(dwm.getName());
-			temp += dwm.getName()+"-----";
-		}
+		Person person1 = JSON.parseObject(temp, Person.class);
+		System.out.println(person1);
 
 		System.out.println("----"+temp);
 
