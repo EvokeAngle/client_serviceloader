@@ -33,6 +33,39 @@
 			<version>${javafx.version}</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+		<!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.75</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>29.0-jre</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/com.lmax/disruptor -->
+		<dependency>
+			<groupId>com.lmax</groupId>
+			<artifactId>disruptor</artifactId>
+			<version>3.4.2</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>2.10.8</version>
+		</dependency>
+
+
+
+
 	</dependencies>
 
 
@@ -52,10 +85,20 @@
 						<list>disneyworld.implementation.Mickey</list>
 						<list>disneyworld.implementation.Donald</list>
 						<list>disneyworld.implementation.Goofy</list>
+
+						<list>com.alibaba.fastjson.serializer.GuavaCodec</list>
+<!--						<list>com.alibaba.fastjson.JSON</list>-->
+						<list>com.google.common.collect.Multimap</list>
+						<list>javax.money.Monetary</list>
+						<list>com.alibaba.fastjson.util.ASMClassLoader</list>
+<!--						<list>org.joda.time.ReadablePartial</list>-->
+
 					</reflectionList>
 
 					<nativeImageArgs>
 						<nativeImageArg>-H:+TraceClassInitialization</nativeImageArg>
+						<nativeImageArg>-H:+AllowIncompleteClasspath</nativeImageArg>
+						<nativeImageArg>--report-unsupported-elements-at-runtime</nativeImageArg>
 					</nativeImageArgs>
 
 				</configuration>
