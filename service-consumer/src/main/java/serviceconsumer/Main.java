@@ -23,32 +23,15 @@ public class Main extends Application  {
 
 	@Override
 	public void start(Stage stage) {
+		String temp = "{\"age\":22,\"name\":\"A\"}";
 
-//		ServiceLoader<DisneyWorldMember> serviceLoader = null;
-//		try {
-//			serviceLoader = ServiceLoader.load(DisneyWorldMember.class);
-//		} catch (Throwable e) {
-//			e.printStackTrace();
-//		}
-//
-//		String temp = "";
-//		// as iterable
-//		System.out.println(serviceLoader.findFirst());
-//		for (final var dwm : serviceLoader) {
-//			System.out.println(dwm.getName());
-//			temp += dwm.getName()+"-----";
-//		}
-		Person person = new Person();
-		person.setName("A");
-		person.setAge(22);
-		String temp = JSON.toJSONString(person);
 
-		Person person1 = JSON.parseObject(temp, Person.class);
-		System.out.println(person1);
+		Person person = JSON.parseObject(temp, Person.class);
+		System.out.println(person);
 
 		System.out.println("----"+temp);
 
-		Label label = new Label("----"+temp);
+		Label label = new Label("----"+person.getName());
 
 		VBox root = new VBox(30, label);
 		root.setAlignment(Pos.CENTER);
