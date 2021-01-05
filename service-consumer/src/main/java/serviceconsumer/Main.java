@@ -22,6 +22,8 @@ public class Main extends Application  {
 	@Override
 	public void start(Stage stage) {
 
+		String a = "20018";
+
 		ServiceLoader<DisneyWorldMember> serviceLoader = null;
 		try {
 			serviceLoader = ServiceLoader.load(DisneyWorldMember.class);

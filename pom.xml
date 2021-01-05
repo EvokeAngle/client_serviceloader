@@ -12,6 +12,7 @@
 		<module>service-consumer</module>
 		<module>service-provider</module>
 		<module>service-interface</module>
+		<module>client_graalvm_js</module>
 	</modules>
 
 	<properties>

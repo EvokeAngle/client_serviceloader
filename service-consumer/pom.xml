@@ -21,6 +21,9 @@
 
 	<artifactId>service-consumer</artifactId>
 	<dependencies>
+
+
+
 		<dependency>
 			<groupId>ch.antonovic.demo</groupId>
 			<artifactId>service-provider</artifactId>
