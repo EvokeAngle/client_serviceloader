@@ -49,6 +49,7 @@
 
                     <nativeImageArgs>
                         <nativeImageArg>-H:+TraceClassInitialization</nativeImageArg>
+                        <nativeImageArg>--language:js</nativeImageArg>
                     </nativeImageArgs>
 
                 </configuration>
